@@ -1,15 +1,5 @@
+const fruits = require("../data/fruits");
 const { v4: uuidv4 } = require("uuid");
-
-const fruits = [
-    {
-        id: uuidv4(),
-        name: "banana"
-    },
-    {
-        id: uuidv4(),
-        name: "mango"
-    }
-]
 
 exports.getAllFruits = (req, res) => {
     console.log(fruits);

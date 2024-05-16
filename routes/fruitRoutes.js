@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const checkFruitName = require("../middleware/checkFruitName");
 const fruitController = require("../controllers/fruitController");
 
 // localhost:3000/fruits/
@@ -9,9 +10,9 @@ router.get("/", fruitController.getAllFruits);
 router.get("/:id", fruitController.getFruitById);
 
 // localhost:3000/fruits/
-router.post("/", fruitController.addNewFruit);
+router.post("/", checkFruitName, fruitController.addNewFruit);
 
-router.put("/:id", fruitController.updateFruit);
+router.put("/:id", checkFruitName, fruitController.updateFruit);
 
 router.delete("/:id", fruitController.deleteFruit);
 
