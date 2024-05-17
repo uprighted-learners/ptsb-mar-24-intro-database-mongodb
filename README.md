@@ -1,9 +1,18 @@
 To setup this backend. You need to:
 
+Run the command
 ```
-Run: npm install
-Create a .env file with the following properties:
-    PORT = [Your PORT number]
+npm install
+```
 
-Run: npm run dev
+Then create a .env file with the following properties:
+
+```
+PORT=[YOUR PORT NUMBER HERE]
+```
+
+Finally run
+
+```
+npm run dev
 ```
