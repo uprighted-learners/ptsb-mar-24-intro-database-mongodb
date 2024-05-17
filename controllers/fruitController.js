@@ -1,8 +1,8 @@
 const fruits = require("../data/fruits");
 const { v4: uuidv4 } = require("uuid");
+const fs = require("fs");
 
 exports.getAllFruits = (req, res) => {
-    console.log(fruits);
     res.json(fruits);
 }
 
